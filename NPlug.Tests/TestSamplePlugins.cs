@@ -1,7 +1,6 @@
 using System.Text.RegularExpressions;
 using NPlug.Interop;
-using NPlug.SimpleDelay;
-using NPlug.SimpleProgramChange;
+using NPlug.TestDelay;
 using NPlug.Validator;
 
 namespace NPlug.Tests;
@@ -12,7 +11,7 @@ public class TestSamplePlugins
     {
         Console.WriteLine("ZZZTEST");
         // InteropHelper.Tracer = new TempFileInteropTracer();
-        var factory = SimpleDelayPlugin.GetFactory();
+        var factory = TestDelay.GetFactory();
         AudioPluginValidator.Validate(factory.Export, Console.Out, Console.Error);
 
         if (InteropHelper.HasObjectAlive())
@@ -25,13 +24,7 @@ public class TestSamplePlugins
     [Test]
     public Task TestSimpleDelay()
     {
-        return VerifyPlugin(SimpleDelayPlugin.GetFactory);
-    }
-
-    [Test]
-    public Task TestSimpleProgramChangePlugin()
-    {
-        return VerifyPlugin(SimpleProgramChangePlugin.GetFactory);
+        return VerifyPlugin(TestDelay.GetFactory);
     }
 
     private Task VerifyPlugin(Func<AudioPluginFactory> factory)
