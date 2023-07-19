@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPlug.TestDelay", "NPlug.TestDelay.csproj", "{27E60419-C420-4CD9-BE93-292969B93CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPlug.TestDelay", "TestDelay\NPlug.TestDelay.csproj", "{E25804D4-C095-4934-B900-8622AE7DD17B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{27E60419-C420-4CD9-BE93-292969B93CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27E60419-C420-4CD9-BE93-292969B93CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27E60419-C420-4CD9-BE93-292969B93CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27E60419-C420-4CD9-BE93-292969B93CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25804D4-C095-4934-B900-8622AE7DD17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25804D4-C095-4934-B900-8622AE7DD17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25804D4-C095-4934-B900-8622AE7DD17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25804D4-C095-4934-B900-8622AE7DD17B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
