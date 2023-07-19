@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.Build.NoTargets/3.7.0">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <IsPackable Condition="'$(IsPackable)' == ''">false</IsPackable>
+    <Version>2.0.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>NPlug.Proxy</PackageId>
+    <Description>Package providing a native proxy for NPlug. This package is not meant to be used directly.</Description>
+    <Copyright>Alexandre Mutel</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Authors>Alexandre Mutel</Authors>
+    <PackageTags>audio;sound;vst</PackageTags>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageIcon>NPlug.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/xoofx/NPlug</PackageProjectUrl>
+    <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)../../img/NPlug.png" Pack="true" PackagePath="/" />
+    <None Include="readme.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="build\**\*">
+      <PackagePath>%(Identity)</PackagePath>
+      <Pack>true</Pack>
+    </None>
+  </ItemGroup>
+</Project>
