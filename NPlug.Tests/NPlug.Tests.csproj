@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <!--<NPlugInteropTracer>true</NPlugInteropTracer>-->
+    <StartupObject>NPlug.Tests.TestSamplePlugins</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.6.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Verify.NUnit" Version="19.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\samples\NPlug.SimpleDelay\NPlug.SimpleDelay.csproj" />
+    <ProjectReference Include="..\..\samples\NPlug.SimpleProgramChange\NPlug.SimpleProgramChange.csproj" />
+    <ProjectReference Include="..\NPlug.Validator\NPlug.Validator.csproj" />
+    <ProjectReference Include="..\NPlug\NPlug.csproj" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)../NPlug.Proxy/build/NPlug.Proxy.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)../NPlug.Validator/build/NPlug.Validator.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)../NPlug/build/NPlug.targets" />
+
+</Project>
