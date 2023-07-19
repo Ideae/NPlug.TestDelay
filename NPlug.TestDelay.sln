@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPlug.TestDelay", "TestDelay\NPlug.TestDelay.csproj", "{E25804D4-C095-4934-B900-8622AE7DD17B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPlug.Tests", "NPlug.Tests\NPlug.Tests.csproj", "{2FDCD7DA-DC6F-4595-BEF5-AC7891FF576E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E25804D4-C095-4934-B900-8622AE7DD17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E25804D4-C095-4934-B900-8622AE7DD17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E25804D4-C095-4934-B900-8622AE7DD17B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FDCD7DA-DC6F-4595-BEF5-AC7891FF576E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDCD7DA-DC6F-4595-BEF5-AC7891FF576E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDCD7DA-DC6F-4595-BEF5-AC7891FF576E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDCD7DA-DC6F-4595-BEF5-AC7891FF576E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
