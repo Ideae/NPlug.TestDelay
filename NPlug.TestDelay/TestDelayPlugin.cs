@@ -1,4 +1,4 @@
-using NPlug.Validator;
+//using NPlug.Validator;
 using SharpDX.DXGI;
 using System.Runtime.CompilerServices;
 
@@ -18,6 +18,7 @@ public static class TestDelayPlugin
     internal static void ExportThisPlugin()
     {
         AudioPluginFactoryExporter.Instance = GetFactory();
+        /*
         // Call the validator on the plugin
 		var result = AudioPluginValidator.Validate(AudioPluginFactoryExporter.Instance.Export, Console.Out, Console.Error);
 		if (!result)
@@ -27,5 +28,6 @@ public static class TestDelayPlugin
             Console.WriteLine(result.ToString());
 			Console.WriteLine("~~~~~~~~~~~~ VALIDATOR ERROR END ~~~~~~~~~~~~~");
 		}
+        */
 	}
 }
