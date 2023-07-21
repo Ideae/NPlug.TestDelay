@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace NPlug.TestDelay;
 public class TestDelayUI : IAudioPluginView
 {
-	public ViewRectangle Size => throw new NotImplementedException();
+	public ViewRectangle Size => new ViewRectangle(50, 50, 150, 150);
 
 	// Todo: fix these functions later, just adding test implementations for now
 	public void Attached(nint parent, AudioPluginViewPlatform type)
