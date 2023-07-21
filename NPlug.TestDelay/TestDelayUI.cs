@@ -12,7 +12,7 @@ public class TestDelayUI : IAudioPluginView
 	// Todo: fix these functions later, just adding test implementations for now
 	public void Attached(nint parent, AudioPluginViewPlatform type)
 	{
-		throw new NotImplementedException();
+		//throw new NotImplementedException();
 	}
 
 	public bool CanResize()
