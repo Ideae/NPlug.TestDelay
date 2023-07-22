@@ -5,8 +5,10 @@ using System.Reflection;
 using System.IO;
 using Veldrid;
 using System.Runtime.CompilerServices;
+using System.Diagnostics;
+using ImGuiNET;
 
-namespace ImGuiNET
+namespace NPlug.TestDelay
 {
     /// <summary>
     /// A modified version of Veldrid.ImGui's ImGuiRenderer.
@@ -55,7 +57,8 @@ namespace ImGuiNET
         /// </summary>
         public ImGuiController(GraphicsDevice gd, OutputDescription outputDescription, int width, int height)
         {
-            _gd = gd;
+			Debug.WriteLine("ZZZ: Calling ImGuiController constructor");
+			_gd = gd;
             _windowWidth = width;
             _windowHeight = height;
 

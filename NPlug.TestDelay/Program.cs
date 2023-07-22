@@ -9,7 +9,9 @@ using Veldrid.StartupUtilities;
 
 using static ImGuiNET.ImGuiNative;
 
-namespace ImGuiNET
+using ImGuiNET;
+
+namespace NPlug.TestDelay
 {
     class Program
     {
@@ -33,14 +35,24 @@ namespace ImGuiNET
 
         static void SetThing(out float i, float val) { i = val; }
 
-        static void Main(string[] args)
+        //static void Main(string[] args)
+        public static void StartUILoop()
         {
-            // Create window, GraphicsDevice, and all resources necessary for the demo.
-            VeldridStartup.CreateWindowAndGraphicsDevice(
-                new WindowCreateInfo(50, 50, 1280, 720, WindowState.Normal, "ImGui.NET Sample Program"),
-                new GraphicsDeviceOptions(true, null, true, ResourceBindingModel.Improved, true, true),
-                out _window,
-                out _gd);
+			Debug.WriteLine("ZZZ: StartUILoop");
+            try
+            {
+				VeldridStartup.CreateWindowAndGraphicsDevice(
+				new WindowCreateInfo(50, 50, 1280, 720, WindowState.Normal, "ImGui.NET Sample Program"),
+				new GraphicsDeviceOptions(true, null, true, ResourceBindingModel.Improved, true, true),
+				out _window,
+				out _gd);
+			}
+            catch(Exception e)
+            {
+                Debug.WriteLine("ZZZ: Caught exception: " + e.ToString());
+            }
+			// Create window, GraphicsDevice, and all resources necessary for the demo.
+			
             _window.Resized += () =>
             {
                 _gd.MainSwapchain.Resize((uint)_window.Width, (uint)_window.Height);
@@ -57,7 +69,8 @@ namespace ImGuiNET
             // Main application loop
             while (_window.Exists)
             {
-                deltaTime = stopwatch.ElapsedTicks / (float)Stopwatch.Frequency;
+				Debug.WriteLine("ZZZ: while (_window.Exists)");
+				deltaTime = stopwatch.ElapsedTicks / (float)Stopwatch.Frequency;
                 stopwatch.Restart();
                 InputSnapshot snapshot = _window.PumpEvents();
                 if (!_window.Exists) { break; }
@@ -72,7 +85,7 @@ namespace ImGuiNET
                 _cl.End();
                 _gd.SubmitCommands(_cl);
                 _gd.SwapBuffers(_gd.MainSwapchain);
-            }
+			}
 
             // Clean up Veldrid resources
             _gd.WaitForIdle();

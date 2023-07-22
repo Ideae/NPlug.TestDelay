@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace NPlug.TestDelay;
 
 public class TestDelayController : AudioController<TestDelayModel>
@@ -6,6 +8,7 @@ public class TestDelayController : AudioController<TestDelayModel>
 
 	protected override IAudioPluginView? CreateView()
 	{
+		Debug.WriteLine("ZZZ: CreateView");
 		return new TestDelayUI();
 	}
 }
